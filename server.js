@@ -10,7 +10,7 @@ const exphbs = require('express-handlebars');
 
 // console.log(routes)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
