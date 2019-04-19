@@ -1,8 +1,6 @@
 // Dependencies
 const express = require("express");
 const app = express();
-const bodyParser = require("body-parser");
-const logger = require("morgan");
 const mongoose = require("mongoose");
 const exphbs = require('express-handlebars');
 
@@ -17,12 +15,6 @@ mongoose.Promise = Promise;
 // Database configuration with mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/week18newsscraper");
 const db = mongoose.connection;
-
-// Use morgan and body parser with our app
-app.use(logger("dev"));
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
 
 // Make public a static dir
 app.use(express.static("public"));
